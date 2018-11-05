@@ -1,0 +1,39 @@
+main {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+
+table, td, th {
+	border: 1px solid black;
+	border-collapse: collapse; /*no double borders*/
+	padding: 0.5em;
+}
+
+th {
+	background-color: khaki;
+}
+
+table {
+	margin-bottom: 1em;
+}
+
+tr:nth-child(odd) { /*every other row child*/
+	background-color: cyan;
+}
+
+button {
+	font-family: sans-serif;
+	font-size: 1em;
+	width: 13em;
+	height: 2em;
+	border: 0.1em solid black;
+	border-radius: 0.5em;
+	box-shadow: 0.2em 0.2em 0.3em rgb(0,0,0);
+	margin-bottom: 0.3em;
+	margin-top: 0.3em;
+}
+
+button:hover {
+	background-color: gray;
+}

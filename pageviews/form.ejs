@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title> <%= title %> </title>
+		<link rel="stylesheet" href="/styles/styles.css" type="text/css">
+	</head>
+	<body>
+		<h1> <%= header %> </h1>
+		<form action="<%= action %>" method="post">
+			<p>
+				<label for="personId">PersonId:</label>
+				<input type="text" id="personId" size="5" name="personId" value="<%= personId.value %>" <%= personId.readonly %> >
+			</p>
+			<p>
+				<label for="firstname">First name:</label>
+				<input type="text" id="firstname" size="15" name="firstname" value="<%= firstname.value %>" <%= firstname.readonly %> >
+			</p>
+			<p>
+				<label for="lastname">Last name:</label>
+				<input type="text" id="lastname" size="25" name="lastname" value="<%= lastname.value %>" <%= lastname.readonly %> >
+			</p>
+			<p>
+				<label for="department">Department:</label>
+				<input type="text" id="department" size="10" name="department" value="<%= department.value %>" <%= department.readonly %> >
+			</p>
+			<p>
+				<label for="salary">Salary:</label>
+				<input type="text" id="salary" size="10" name="salary" value="<%= salary.value %>" <%= salary.readonly %> >
+			</p>
+
+			<button type="submit">Submit</button>
+		</form>
+		<a href="/"><button>Menu</button></a>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+{
+	"getAllSql":[
+		"select personId, firstname, lastname, department, salary from person"
+	],
+	"getPersonSql":[
+		"select personId, firstname, lastname, department, salary from person",
+		"where personId = ?"
+	],
+	"insertPersonSql":[
+		"insert into person (personId, firstname, lastname, department, salary)",
+		"values (?, ?, ?, ?, ?)"
+	],
+	"deletePersonSql":[
+		"delete from person where personId = ?"
+	],
+	"updatePersonSql":[
+		"update person set firstname = ?, lastname = ?, department = ?, salary = ?",
+		"where personId = ?"
+	]
+}
