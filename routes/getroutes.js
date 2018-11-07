@@ -5,14 +5,14 @@ const routes = require('express').Router();
 const initRoutes = function(storage, sendErrorPage){
 	let dataStorage = storage;
 
-	routes.get('/all', (req, res) => {
+	routes.get('/all', (req, res) => { //http get method
 		dataStorage.getAll()
 			.then(result => res.render('all_persons', {result:result}))
 			.catch(err => sendErrorPage(res, err.message));
 	});
 
 	routes.get('/getperson', (req, res) => //one-liner does not need curly braces
-		res.render('get_person', {title:'Get', header:'Get person by ID', action:'/getperson'})
+		res.render('get_person', {title:'Get', header:'Get person by ID', action:'/getperson'}) //directing these to the get_person page
 	);
 
 	routes.post('/getperson', (req, res) => {

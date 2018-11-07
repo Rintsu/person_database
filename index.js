@@ -17,6 +17,8 @@ const statusHandling = [sendErrorPage, sendStatusPage];
 
 const getroutes = require('./routes/getroutes')(personStorage, ...statusHandling);
 const insertroutes = require('./routes/insertroutes')(personStorage, ...statusHandling);
+const deleteroutes = require('./routes/deleteroutes')(personStorage, ...statusHandling);
+const updateroutes = require('./routes/updateroutes')(personStorage, ...statusHandling);
 
 app.use(express.urlencoded({extended:false})); //parsing the form data, has to be before other .uses
 
@@ -26,6 +28,8 @@ app.set('views', path.join(__dirname, 'pageviews'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', getroutes);
 app.use('/', insertroutes);
+app.use('/', deleteroutes);
+app.use('/', updateroutes);
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'menu.html')));
 
 server.listen(port, host, () => {
